@@ -4,7 +4,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do 
+	gem 'sqlite3', '1.3.5'
+end
+
+# use postgres as production database
+group :production do
+  gem 'pg', '0.12.2'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -43,3 +50,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Gems used only for assets and not required # in production environments by default. group :assets do
+
+
