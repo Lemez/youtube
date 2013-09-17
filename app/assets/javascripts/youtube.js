@@ -1,3 +1,6 @@
+$(document).ready(function () {
+
+
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
@@ -20,6 +23,9 @@ function onYouTubeApiLoad() {
     search();
 }
 
+    $('#clickme').click(function (){
+
+
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
     var request = gapi.client.youtube.search.list({
@@ -36,3 +42,6 @@ function search() {
 function onSearchResponse(response) {
     showResponse(response);
 }
+
+});
+});
